@@ -3,37 +3,82 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My custom Bulma website</title>
+    <title>invented form</title>
     <link rel="stylesheet" href="style/style.css">
   </head>
   <body>
+    <script src="js/poems.js"></script>
+
+    <div class="container is-fluid">
+
      <h1 class="title">
-        Bulma
+        invented form
       </h1>
 
       <p class="subtitle">
-        Modern CSS framework based on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a>
+        a tool for generating poetic dramas from our technological mundanity
       </p>
+
+      <hr>
+
+      <h1 class="title">
+        1. enter the last text message you received (no emojis, please!)
+      </h1>
 
       <div class="field">
         <div class="control">
-          <input class="input" type="text" placeholder="Input">
+          <input class="input" type="text" placeholder="text message">
         </div>
       </div>
 
-      <div class="field">
+      <hr>
+
+      <h1 class="title">
+        2. select the theme of your poem
+      </h1>
+
+      <!-- <div class="field">
         <p class="control">
           <span class="select">
             <select>
-              <option>Select dropdown</option>
+              <option>theme 1</option>
+              <option>theme 2</option>
+              <option>theme 3</option>
             </select>
           </span>
         </p>
-      </div>
+      </div> -->
 
       <div class="buttons">
-        <a class="button is-primary">Primary</a>
-        <a class="button is-link">Link</a>
+        <button type="button" class="button">theme 1</button>
+        <button type="button" class="button">theme 2</button>
+        <button type="button" class="button">theme 3</button>
       </div>
+
+      <hr>
+
+      <h1 class="title">
+        3. generate text
+      </h1>
+
+      <div class="buttons">
+        <button type="button" class="button" onclick="generate()">click me!</button>
+      </div>
+
+      <hr>
+
+      <h1 class="title">
+        4. your poem
+      </h1>
+
+      <div class="box">
+        <h2 class="content" id="output"></h2>
+      </div>
+
+      <footer class="footer">
+        <p>poetic form by <a target="_blank" rel="noopener noreferrer" href="https://matthewbarton.dev">Matthew Barton</a></p>
+        <p>poems by you</p>
+      </footer>
+    </div>
   </body>
 </html>

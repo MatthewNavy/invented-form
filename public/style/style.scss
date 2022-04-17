@@ -1,8 +1,7 @@
 @charset "utf-8";
 
 // Import a Google Font
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
-
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
 // Set your brand colors
 $purple: #8A4D76;
 $pink: #FA7C91;
@@ -11,16 +10,16 @@ $beige-light: #D0D1CD;
 $beige-lighter: #EFF0EB;
 
 // Update Bulma's global variables
-$family-sans-serif: "Nunito", sans-serif;
-$grey-dark: $brown;
-$grey-light: $beige-light;
-$primary: $purple;
-$link: $pink;
+$family-sans-serif: 'Inconsolata', monospace;
+$grey-dark: #bf5f82;
+$grey-light: #ffc1e3;
+$primary: #000000;
+$link: #1e88e5;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 
 // Update some of Bulma's component variables
-$body-background-color: $beige-lighter;
+$body-background-color: #f48fb1;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
@@ -35,3 +34,17 @@ $input-shadow: none;
 @import "../../node_modules/bulma/sass/components/navbar.sass";
 @import "../../node_modules/bulma/sass/layout/hero.sass";
 @import "../../node_modules/bulma/sass/layout/section.sass";
+
+footer {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+h2 {
+  color: $primary;
+}
+
+button {
+  color: white;
+}
