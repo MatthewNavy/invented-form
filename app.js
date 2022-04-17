@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var express = require('express');
 var cors = require('cors');
@@ -15,5 +15,6 @@ app.get('/js/poems.js', (req, res) => {
 
 app.use(express.static(__dirname + "/public/"));
 
-app.listen(port);
-console.log(`Express started on port ${port}`);
+app.listen(port, () => {
+  console.log('app listening on port ' + port);
+});
