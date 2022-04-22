@@ -3389,7 +3389,9 @@ a.navbar-item,
 footer {
   margin-left: auto;
   margin-right: auto;
-  text-align: center; }
+  text-align: center;
+  bottom: 0%;
+  position: relative; }
 
 h2 {
   color: #000000; }

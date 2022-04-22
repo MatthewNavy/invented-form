@@ -3,26 +3,31 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>invented form</title>
+    <title>cardioid compass</title>
     <link rel="stylesheet" href="style/style.css">
   </head>
   <body>
-    <script src="js/poems.js"></script>
+    <script type="module">
+      import { getPoem } from "./poetry/generate.js";
+      window.getPoem = getPoem;
+    </script>
+    
+    <script src="poetry/poem.js"></script>
 
     <div class="container is-fluid slide-in-top">
 
      <h1 class="title">
-        invented form
+        cardioid compass
       </h1>
 
       <p class="subtitle">
-        a tool for generating poetic dramas from our technological mundanity
+        a tool for finding poetry in the technological mundanity of love
       </p>
 
       <hr>
 
       <h1 class="title">
-        1. enter the last text message you received (no emojis, please!)
+        1. enter a text message you received from a loved one
       </h1>
 
       <div class="field">
@@ -34,16 +39,23 @@
       <hr>
 
       <h1 class="title">
-        2. select the theme of your poem
+        2. select a co-author for your poem
       </h1>
 
       <div class="field">
         <p class="control">
           <span class="select">
             <select>
-              <option>theme 1</option>
-              <option>theme 2</option>
-              <option>theme 3</option>
+              <option>Pablo Neruda</option>
+              <option>William Shakespeare</option>
+              <option>William Carlos Williams</option>
+              <option>Charles Bukowski</option>
+              <option>Emily Dickinson</option>
+              <option>Audre Lorde</option>
+              <option>Anne Sexton</option>
+              <option>Frank O'Hara</option>
+              <option>Jenny Browne</option>
+              <option>Matthew Barton</option>
             </select>
           </span>
         </p>
@@ -58,11 +70,11 @@
       <hr>
 
       <h1 class="title">
-        3. generate text
+        3. generate masterpiece
       </h1>
 
       <div class="buttons">
-        <button type="button" class="button" onclick="generate()">click me!</button>
+        <button type="button" class="button" onclick="getPoem()">click me!</button>
       </div>
 
       <hr>
@@ -74,6 +86,8 @@
       <div class="box slide-in-bottom">
         <h2 id="output"></h2>
       </div>
+
+      <br>
 
       <footer class="footer">
         <p>poetic form by <a target="_blank" rel="noopener noreferrer" href="https://matthewbarton.dev">Matthew Barton</a></p>
