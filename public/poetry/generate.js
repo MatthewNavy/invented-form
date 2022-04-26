@@ -25,16 +25,23 @@ export async function getPoem() {
 }
 
 function writePoem(text, poet) {
-  // TODO: scale values with length of text
-  const markov = new MarkovGenerator(4, 3000);
-
   const linesA = mapPoet(poet);
   const linesB = text.split(".").filter(sentence => sentence.length > 0);
   //console.log(linesA);
 
+  const poetAvgLen = avgLen(linesA);
+  const textAvgLen = avgLen(linesB);
+  console.log("poem avg str len: " + poetAvgLen);
+  console.log("text avg str len: " + textAvgLen);
+
+  //const max = Math.floor(textAvgLen / poetAvgLen * 500000);
+  //console.log("max:" + max);
+  const max = 2000000;
+  const markov = new MarkovGenerator(3, max);
+
   // TODO: scale values with length of text
   const totalA = 1;
-  const totalB = 8;
+  const totalB = 7;
 
   for (let n = 0; n < totalA; n++) {
     for (let i = 0; i < linesA.length; i++) {
@@ -53,6 +60,17 @@ function writePoem(text, poet) {
     poem += markov.generate() + "\n";
   }
   return poem;
+}
+
+function avgLen(arr) {
+  if (arr.length == 0) {
+    return 0;
+  }
+  let sum = 0;
+  arr.forEach(str => {
+    sum += str.length;
+  });
+  return sum / arr.length;
 }
 
 function mapPoet(poet) {

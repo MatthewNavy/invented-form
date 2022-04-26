@@ -13,16 +13,8 @@ app.get('/poetry/generate.js', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/poetry/generate.js'));
 })
 
-app.get('/poetry/poem.js', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/poetry/poem.js'));
-})
-
-app.get('/poetry/poets/bukowski.js', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/poetry/poets/bukowski.js'));
-})
-
-app.get('/poetry/poets/shakespeare.js', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/poetry/poets/shakespeare.js'));
+app.get('/poetry/markov.js', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/poetry/markov.js'));
 })
 
 app.get('/favicon.ico', (req, res) => {
